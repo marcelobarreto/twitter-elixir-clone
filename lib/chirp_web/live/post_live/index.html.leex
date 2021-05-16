@@ -10,7 +10,9 @@
 <% end %>
 
 <div id="posts">
-
+  <%= for post <- @posts do %>
+    <%= live_component @socket, ChirpWeb.PostLive.PostComponent, id: post.id, post: post %>
+  <% end %>
 </div>
 
 <span><%= live_patch "New Post", to: Routes.post_index_path(@socket, :new) %></span>
