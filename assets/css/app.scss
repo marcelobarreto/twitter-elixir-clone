@@ -88,3 +88,15 @@
   display: block;
   margin: -1rem 0 2rem;
 }
+
+.post {
+  border: 1px solid lightgray;
+  margin: 4px;
+  padding: 8px;
+}
+
+.post-avatar {
+  & img {
+    border-radius: 100%;
+  }
+}
